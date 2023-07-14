@@ -1,0 +1,40 @@
+.Nav{
+  height: 130px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-size: 50px;
+  
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  display: flex;
+  width: 1600px;
+  flex-wrap: wrap;
+  /* justify-content: space-evenly; */
+  margin: 2% auto;
+
+}
+
+.container div{
+  width: 300px;
+  height: 300px;
+  background-color: #2f3e46;
+  box-shadow: 10px white;
+  border-radius: 8%;
+  margin: 22px;
+  font-size: 45px;
+  text-align: center;
+  padding-top: 100px;
+  color: #cad2c5;
+}
+
+.main{
+  background-color: #84a98c;
+}
