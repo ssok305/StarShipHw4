@@ -5,17 +5,17 @@ export default function StarShips(){
       
         const reponse = await fetch("https://swapi.dev/api/starships/");
         const data = await reponse.json()
-        console.log(data.results)
-        return data.results.map((name) => {
-            return setStarShips(ships => [...ships,name])
-        })
+        const [starships, setStarships] = useState([]);
 
-
-    }
-    // arr = getShips("https://swapi.dev/api/starships/");
-    useEffect(() =>{
-       getShips();
-    }, [])
+        useEffect(() => {
+          getAllStarships()
+            .then(response => {
+              setStarships(response.data.results);
+            })
+            .catch(error => {
+              console.log('Error fetching starships:', error);
+            });
+        }, []);
     // console.log(starships)
     return(
         <div className="container">
@@ -26,5 +26,6 @@ export default function StarShips(){
 
         </div>
     )
+}
 }
 
